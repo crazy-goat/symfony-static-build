@@ -23,11 +23,10 @@ jobs:
             -   name: Install dependencies
                 run: composer install --no-interaction --prefer-dist
 
-            -   name: Change dir to build
-                run: cd build
-
             -   name: Create static image
                 run: ./build-static.sh
+                working-directory: build
 
             -   name: Build executable phar
                 run: php build.php
+                working-directory: build
