@@ -1,4 +1,6 @@
 {
+    "name": "crazy-goat/symfony-static-build",
+    "description": "Minimal Symfony + Workerman app in a static binary on scratch. Just 5MB. For demo use only.",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -10,7 +12,7 @@
         "crazy-goat/workerman-bundle": "^0.9.2",
         "symfony/console": "7.3.*",
         "symfony/dotenv": "7.3.*",
-        "symfony/flex": "^2",
+        "symfony/flex": "^2.7.1",
         "symfony/framework-bundle": "7.3.*",
         "symfony/runtime": "7.3.*",
         "symfony/yaml": "7.3.*"

@@ -1,0 +1,46 @@
+name: Build
+
+on:
+    pull_request:
+
+jobs:
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v2
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+
+            -   name: Validate composer.json
+                run: composer validate --strict
+
+            -   name: Composer Audit
+                run: composer audit
+
+            -   name: Install dependencies
+                run: composer install --no-interaction --prefer-dist
+
+            -   name: Create static image
+                run: ./build-static.sh
+                working-directory: build
+
+            -   name: Upload static image artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: micro.sfx
+                    path: build/buildroot/bin/micro.sfx
+                    retention-days: 5
+
+            -   name: Build executable phar
+                run: php -dphar.readonly=0 build.php
+                working-directory: build
+
+            -   name: Upload phar artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: symfony.bin
+                    path: build/symfony.bin
+                    retention-days: 5
