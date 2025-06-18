@@ -28,5 +28,5 @@ jobs:
                 working-directory: build
 
             -   name: Build executable phar
-                run: php build.php
+                run:  php -dphar.readonly=0 build.php
                 working-directory: build
