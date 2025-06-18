@@ -1,0 +1,16 @@
+# config/packages/workerman.yaml
+
+workerman:
+    pid_file: "%kernel.cache_dir%/workerman.pid"
+    log_file: "%kernel.cache_dir%/workerman.log"
+    servers:
+        - name: 'Symfony webserver'
+          listen: http://0.0.0.0:8080
+          processes: 32
+
+    reload_strategy:
+        exception:
+            active: true
+
+        file_monitor:
+            active: true

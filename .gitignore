@@ -1,0 +1,21 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+/.idea
+/build/buildroot
+/build/cache
+/build/downloads
+/build/pkgroot
+/build/source
+/build/source/php-src/sapi/micro/.spc-hash
+/build/craft.log
+/build/image.phar
+/build/spc
+/build/symfony.bin
