@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f010e9b940096eb3c5ef237ed51030c4",
+    "content-hash": "a64020bcf0576af8fb0789cde5818112",
     "packages": [
         {
             "name": "crazy-goat/workerman-bundle",
