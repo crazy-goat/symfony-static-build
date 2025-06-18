@@ -1,7 +1,5 @@
-# Minimal Symfony App with Workerman on Scratch
-
-This Docker image showcases a **minimal setup of a Symfony application** running with [Workerman](https://github.com/walkor/workerman) on a `scratch` base image.  
-The entire application is compiled into a **single static binary** using [static-php-cli](https://github.com/crazywhalecc/static-php-cli), resulting in an image size of **less than 5MB**.
+# Minimal Symfony App with Workerman
+This Docker image showcases a **minimal setup of a Symfony application** running with [Workerman](https://github.com/walkor/workerman) on a `scratch` base image. The entire application is compiled into a **single static binary** using [static-php-cli](https://github.com/crazywhalecc/static-php-cli), resulting in an image size of **less than 5MB**.
 
 ## 🚀 Key Features
 
