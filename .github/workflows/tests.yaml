@@ -26,7 +26,15 @@ jobs:
             -   name: Create static image
                 run: ./build-static.sh
                 working-directory: build
+                with:
+                    name: buildroot/bin/micro.sfx
+                    path: micro.sfx
+                    retention-days: 5
 
             -   name: Build executable phar
                 run:  php -dphar.readonly=0 build.php
                 working-directory: build
+                with:
+                    name: symfony.bin
+                    path: symfony.bin
+                    retention-days: 5
